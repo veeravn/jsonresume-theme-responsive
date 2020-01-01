@@ -1,0 +1,30 @@
+{
+  "name": "jsonresume-theme-responsive",
+  "version": "0.1.19",
+  "description": "A Responsive JSON Resume theme built with bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Veerav Naidu",
+  "license": "MIT",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "gravatar": "^1.8.0",
+    "lodash": "^2.4.2",
+    "mustache": "^2.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/veeravn/jsonresume-theme-responsive.git"
+  },
+  "keywords": [
+    "json",
+    "jsonresume",
+    "theme"
+  ],
+  "bugs": {
+    "url": "https://github.com/veeravn/jsonresume-theme-responsive/issues"
+  },
+  "homepage": "https://github.com/veeravn/jsonresume-theme-responsive"
+}
