@@ -1,6 +1,8 @@
-# jsonresume-theme-responsive
+# jsonresume-theme-tan-responsive
 
-A theme for JSONResume, that relies on Bootstrap and FontAwesome.
+JSON Resume template based on FREE RESPONSIVE HTML/CSS3 CV TEMPLATE from http://www.thomashardy.me.uk/free-responsive-html-css3-cv-template http://www.thomashardy.me.uk/cv/
+
+This theme includes the **Projects** section of the resume.json into the final layout of the resume.
 
 ## Usage
 
@@ -8,7 +10,7 @@ To first get started with this JSONResume theme, you'll need to have the JSONRes
 
 After this, you can get your resume.json ready by typing `resume init`. After hitting enter, your resume will be initialized and you can edit it and fill in the neccessary fields. Check out [the official resume-schema repository](https://github.com/jsonresume/resume-schema) for more information on filling these fields.
 
-When you are finished with your resume, you may test it by yet again opening the command line and typing `resume serve --theme kendall` to see how it looks with this theme. You can replace the word `kendall` with other theme names too.
+When you are finished with your resume, you may test it by yet again opening the command line and typing `resume serve --theme an-responsive` to see how it looks with this theme. You can replace the word `tan-responsive` with other theme names too.
 
 ### Install the command line
 

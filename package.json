@@ -1,6 +1,6 @@
 {
-  "name": "jsonresume-theme-responsive",
-  "version": "0.1.19",
+  "name": "jsonresume-theme-tan-responsive",
+  "version": "0.0.1",
   "description": "A Responsive JSON Resume theme built with bootstrap",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,7 @@
   "dependencies": {
     "fs": "0.0.1-security",
     "gravatar": "^1.8.0",
+    "jsonresume-theme-tan-responsive": "0.0.1",
     "lodash": "^4.17.15",
     "mustache": "^2.3.2"
   },
@@ -21,7 +22,8 @@
   "keywords": [
     "json",
     "jsonresume",
-    "theme"
+    "theme",
+    "responsive"
   ],
   "bugs": {
     "url": "https://github.com/veeravn/jsonresume-theme-responsive/issues"
