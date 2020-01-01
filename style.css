@@ -36,14 +36,14 @@ p {
 }
 
 #name h1 {
-	font-size: 2.5em;
+	font-size: 3.3em;
 	font-weight: 700;
 	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
 	margin-bottom: -6px;
 }
 
 #name h2 {
-	font-size: 2em;
+	font-size: 2.6em;
 	margin-left: 2px;
 	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
 }
@@ -71,7 +71,7 @@ p {
 
 #contactDetails {
 	float: right;
-    width: 40%;
+    width: 38%;
 }
 
 #contactDetails ul {
