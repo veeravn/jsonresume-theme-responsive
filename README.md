@@ -1,6 +1,6 @@
 # jsonresume-theme-responsive
 
-A theme for JSONResume, that relies on Bootstrap and FontAwesome, added with some personal flair.
+A theme for JSONResume, that relies on Bootstrap and FontAwesome.
 
 ## Usage
 
