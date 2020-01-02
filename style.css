@@ -24,7 +24,7 @@ p {
 
 #cv {
 	width: 90%;
-	max-width: 800px;
+	max-width: 1000px;
 	background: #f3f3f3;
 	margin: 30px auto;
 }
@@ -53,7 +53,7 @@ p {
 }
 
 #headshot {
-	width: 12.5%;
+	width: 20%;
 	float: left;
 	margin-right: 30px;
 }
@@ -61,8 +61,8 @@ p {
 #headshot img {
 	width: 100%;
 	height: auto;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
 }
 
 #name {
@@ -275,6 +275,15 @@ section:last-child {
     #cv {
         width: 100%;
     }
+		html, body {
+			width:100%;
+			height:auto;
+			margin:inherit;
+			padding:0;
+		}
+		a[href]:after {
+	    content: none !important;
+	  }
 }
 
 @-webkit-keyframes reset {

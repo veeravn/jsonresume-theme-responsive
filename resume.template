@@ -94,7 +94,6 @@
 					<div class="clear"></div>
 				</section>
 				<section>
-					<br>
 					<div class="sectionTitle">
 						<h1><B>PROJECTS</B></h1>
 					</div>
@@ -118,7 +117,6 @@
 					<div class="clear"></div>
 				</section>
 				<section>
-                    <br/>
 					<div class="sectionTitle">
                         <h1><B>SKILLS</B></h1>
                     </div>
@@ -143,7 +141,6 @@
 					<div class="clear"></div>
 				</section>
 				<section>
-                    <br/>
 					{{#educationBool}}
 					<!-- EDUCATION -->
                     <div class="sectionTitle">
