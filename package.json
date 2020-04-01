@@ -1,6 +1,6 @@
 {
   "name": "jsonresume-theme-tan-responsive",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Responsive JSON Resume theme built with bootstrap",
   "main": "index.js",
   "scripts": {
