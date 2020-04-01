@@ -77,7 +77,7 @@
 					<div class="sectionContent">
 						<article>
 							{{#work}}
-                            <h2>{{position}} at {{company}}, {{work.location}}</h2>
+                            <h2>{{position}} at {{company}}, {{location}}</h2>
                             <p class="subDetails">{{startDateMonth}}{{startDateYear}} – {{endDateMonth}}{{endDateYear}}</p>
                             {{#boolHighlights}}
                                 <ul class="info">
