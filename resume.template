@@ -17,7 +17,7 @@
 		<div id="cv" class="instaFade">
 			<div class="mainDetails">
 				<div id="headshot" class="quickFade">
-					<img src="{{basics.picture}}" alt="avatar" />
+					<img src="{{basics.photo}}" alt="avatar" />
 				</div>
 				<div id="name">
 					<h1 class="quickFade delayTwo">{{basics.name}}</h1>
