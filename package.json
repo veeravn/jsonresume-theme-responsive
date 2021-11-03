@@ -11,7 +11,7 @@
   "dependencies": {
     "fs": "0.0.1-security",
     "gravatar": "^1.8.0",
-    "jsonresume-theme-tan-responsive": "0.0.1",
+    "jsonresume-theme-tan-responsive": "^0.0.1",
     "lodash": "^4.17.15",
     "mustache": "^2.3.2"
   },
