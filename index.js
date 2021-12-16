@@ -102,7 +102,15 @@ function render(resumeObject) {
             p.text = p.network + ": " + p.username;
         }
     });
-
+    if (resumeObject.certificates && resumeObject.certificates.length) {
+        resumeObject.certificatesBool = true;
+        _.each(resumeObject.certificates, function(c){
+            if (c.date) {
+                c.certDateYear = (c.date || "").substr(0,4);
+                c.certDateMonth = getMonth(c.date || "");
+            }
+        });
+    }
     if (resumeObject.work && resumeObject.work.length) {
         resumeObject.workBool = true;
         _.each(resumeObject.work, function(w){
@@ -126,7 +134,7 @@ function render(resumeObject) {
             }
         });
     }
-    
+
     if (resumeObject.projects && resumeObject.projects.length) {
         resumeObject.projectsBool = true;
         _.each(resumeObject.projects, function(w){

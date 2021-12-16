@@ -101,7 +101,7 @@
 						<article>
 							{{#certificates}}
                             <h2>{{name}}</h2>
-                            <p class="subDetails">{{date}}</p>
+                            <p class="subDetails">{{certDateMonth}}{{certDateYear}}</p>
                             <br/>
 							{{/certificates}}
 						</article>
