@@ -1,37 +1,38 @@
-var fs = require('fs');
-var _ = require('lodash');
-var gravatar = require('gravatar');
-var Mustache = require('mustache');
+const fs = require('fs');
+const _ = require('lodash');
+const gravatar = require('gravatar');
+const Mustache = require('mustache');
+const Handlebars = require("handlebars");
 
-var d = new Date();
-var curyear = d.getFullYear();
+const d = new Date();
+const curyear = d.getFullYear();
 
 function getMonth(startDateStr) {
     switch (startDateStr.substr(5,2)) {
-    case '01':
-        return "January ";
-    case '02':
-        return "February ";
-    case '03':
-        return "March ";
-    case '04':
-        return "April ";
-    case '05':
-        return "May ";
-    case '06':
-        return "June ";
-    case '07':
-        return "July ";
-    case '08':
-        return "August ";
-    case '09':
-        return "September ";
-    case '10':
-        return "October ";
-    case '11':
-        return "November ";
-    case '12':
-        return "December ";
+		case '01':
+			return "January ";
+		case '02':
+			return "February ";
+		case '03':
+			return "March ";
+		case '04':
+			return "April ";
+		case '05':
+			return "May ";
+		case '06':
+			return "June ";
+		case '07':
+			return "July ";
+		case '08':
+			return "August ";
+		case '09':
+			return "September ";
+		case '10':
+			return "October ";
+		case '11':
+			return "November ";
+		case '12':
+			return "December ";
     }
 }
 
@@ -39,58 +40,83 @@ function render(resumeObject) {
 
     resumeObject.basics.capitalName = resumeObject.basics.name.toUpperCase();
     if(resumeObject.basics && resumeObject.basics.email) {
-        resumeObject.basics.gravatar = gravatar.url(resumeObject.basics.email, {
+        const gravatarUrl = gravatar.url(resumeObject.basics.email, {
                         s: '200',
                         r: 'pg',
                         d: 'mm'
                     });
+		resumeObject.basics.gravatar = `https://${gravatarUrl}`;
     }
     if (resumeObject.basics.picture || resumeObject.basics.gravatar) {
         resumeObject.photo = resumeObject.basics.picture ? resumeObject.basics.picture : resumeObject.basics.gravatar;
     }
 
-    _.each(resumeObject.basics.profiles, function(p){
+    _.each(resumeObject.basics.profiles, function(p) {
         switch(p.network.toLowerCase()) {
             // special cases
             case "google-plus":
             case "googleplus":
-                p.iconClass = "fa fa-google-plus";
+                p.iconClass = "fa-brands fa-google-plus";
                 break;
             case "flickr":
             case "flicker":
-                p.iconClass = "fa fa-flickr";
+                p.iconClass = "fa-brands fa-flickr";
                 break;
             case "dribbble":
             case "dribble":
-                p.iconClass = "fa fa-dribbble";
+                p.iconClass = "fa-brands fa-dribbble";
                 break;
             case "codepen":
-                p.iconClass = "fa fa-codepen";
+                p.iconClass = "fa-brands fa-codepen";
                 break;
             case "soundcloud":
-                p.iconClass = "fa fa-soundcloud";
+                p.iconClass = "fa-brands fa-soundcloud";
                 break;
             case "reddit":
-                p.iconClass = "fa fa-reddit";
+                p.iconClass = "fa-brands fa-reddit";
                 break;
             case "tumblr":
             case "tumbler":
-                p.iconClass = "fa fa-tumblr";
+                p.iconClass = "fa-brands fa-tumblr";
                 break;
             case "stack-overflow":
             case "stackoverflow":
-                p.iconClass = "fa fa-stack-overflow";
+                p.iconClass = "fa-brands fa-stack-overflow";
                 break;
             case "blog":
             case "rss":
-                p.iconClass = "fa fa-rss";
+                p.iconClass = "fa-solid fa-rss";
                 break;
             case "gitlab":
-                p.iconClass = "fa fa-gitlab";
+                p.iconClass = "fa-brands fa-gitlab";
                 break;
             case "keybase":
-                p.iconClass = "fa fa-key";
+                p.iconClass = "fa-brands fa-keybase";
                 break;
+			case "github":
+				p.iconClass = "fa-brands fa-github";
+				break;
+			case "twitter":
+				p.iconClass = "fa-brands fa-twitter";
+				break;
+			case "facebook":
+				p.iconClass = "fa-brands fa-facebook";
+				break;
+			case "youtube":
+				p.iconClass = "fa-brands fa-youtube";
+				break;
+			case "linkedin":
+				p.iconClass = "fa-brands fa-linkedin";
+				break;
+			case "discord":
+				p.iconClass = "fa-brands fa-discord";
+				break;
+			case "instagram":
+				p.iconClass = "fa-brands fa-instagram";
+				break;
+			// case "":
+				// p.iconClass = "";
+				// break;
             default:
                 // try to automatically select the icon based on the name
                 p.iconClass = "fa fa-" + p.network.toLowerCase();
@@ -143,7 +169,7 @@ function render(resumeObject) {
                 w.startDateMonth = getMonth(w.startDate || "");
 
             }
-            if(w.endDate) {
+            if (w.endDate) {
                 w.endDateYear = (w.endDate || "").substr(0,4);
                 w.endDateMonth = getMonth(w.endDate || "");
             } else {
@@ -167,7 +193,7 @@ function render(resumeObject) {
                 w.startDateMonth = getMonth(w.startDate || "");
 
             }
-            if(w.endDate) {
+            if (w.endDate) {
                 w.endDateYear = (w.endDate || "").substr(0,4);
                 w.endDateMonth = getMonth(w.endDate || "");
             } else {

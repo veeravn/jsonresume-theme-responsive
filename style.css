@@ -406,3 +406,15 @@ section:last-child {
 	-moz-animation-delay: 0, 2.5s;
 	animation-delay: 0, 2.5s;
 }
+
+.pull-left {
+	float: left !important;
+}
+
+.pull-right {
+	float: right !important;
+}
+
+.margin-top-8 {
+	margin-top: 8px !important;
+}

@@ -10,10 +10,11 @@
   "license": "MIT",
   "dependencies": {
     "fs": "0.0.1-security",
-    "gravatar": "^1.8.0",
-    "jsonresume-theme-tan-responsive": "^0.0.1",
-    "lodash": "^4.17.15",
-    "mustache": "^2.3.2"
+    "gravatar": "^1.8.2",
+    "handlebars": "4.7.7",
+    "jsonresume-theme-tan-responsive": "^0.0.7",
+    "lodash": "^4.17.21",
+    "mustache": "~4.2.0"
   },
   "repository": {
     "type": "git",
